@@ -6,6 +6,7 @@ app-root {
   overflow: hidden; // Prevent scrollbars when unnecessary
 }
 
+
 // Ensure .content-container takes up all available space after the navbar
 .navbar-container {
   flex-shrink: 0; // Prevent shrinking

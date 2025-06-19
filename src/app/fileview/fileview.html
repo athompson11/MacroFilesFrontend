@@ -1,0 +1,9 @@
+<mat-list>
+  @for (file of files; track file) {
+    <app-file 
+      [filename]="file" 
+      [selected]="selectedFiles.includes(file)" 
+      (click)="onFileClick($event, file)">
+    </app-file>
+  }
+</mat-list>

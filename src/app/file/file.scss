@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+:host.selected {
+  background-color: slateblue; /* Highlight color */
+  border-left: 4px solid #0078d7; /* Example border for selected item */
+}
+
+:host(:hover) {
+  background-color: slateblue; /* Subtle highlight on hover */
+}

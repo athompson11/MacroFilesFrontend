@@ -1,9 +1,14 @@
 <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #drawer [opened]="drawerOpen()" position="end">
-        <mat-list role="list">
-        <mat-list-item role="listitem">Item 1</mat-list-item>
-        <mat-list-item role="listitem">Item 2</mat-list-item>
-        <mat-list-item role="listitem">Item 3</mat-list-item>
+        <mat-list>
+            <mat-list-item>
+                <a href="#">
+                    <div class="login-button">
+                        <p>Sign in</p>
+                        <mat-icon matListItemIcon>login</mat-icon>
+                    </div>
+                </a>
+            </mat-list-item>
         </mat-list>
     </mat-sidenav>
     <mat-sidenav-content>

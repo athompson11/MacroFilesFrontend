@@ -4,4 +4,39 @@
 
 mat-sidenav-content{
     height: 100%;
+    width: auto;
+}
+
+mat-sidenav {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    text-align: center;
+    padding: 0.25rem;
+    width: auto;
+    max-width: 15vw;
+    min-width: 10vw;
+}
+
+.login-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: slategray;
+}
+
+.login-button p {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
 }
