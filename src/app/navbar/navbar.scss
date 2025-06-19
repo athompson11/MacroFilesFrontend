@@ -1,0 +1,11 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.2em;
+}
