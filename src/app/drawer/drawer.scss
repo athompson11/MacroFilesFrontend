@@ -1,71 +1,87 @@
-.sidenav-container{
-    height: 100%;
-    width: 100%;
-}
-
-mat-sidenav-content{
+.sidenav-container {
     height: 100%;
     width: auto;
 }
 
+
+mat-sidenav-content {
+    height: 80vh;
+    width: auto;
+    overflow-y: hidden;
+}
 
 mat-sidenav {
     display: flex;
     flex-direction: column;
-    align-items: right;
-    justify-content: right;
+    align-items: flex-end;
+    justify-content: flex-start;
     text-align: center;
-    padding: 0.25rem 0 0.25rem 0.25rem; /* Remove right padding */
-    width: auto;
-    max-width: 25vw;
+    padding: 0.25rem 0 0.25rem 0.25rem;
+    height: 100%;
+    width: 80%;
+    max-width: 45vw;
     min-width: 10vw;
 }
 
-
 mat-list {
-    padding: 0 !important; /* Remove default Material list padding */
+    padding: 0 !important;
+    width: 100%;
 }
 
-.login-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+mat-list-item {
+    padding: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+}
+
+mat-list-item:hover {
+    cursor: pointer !important;
+}
+
+.login-button,
+.logout-button {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 48px !important;
+    margin: 0.5rem 0 !important;
+    padding: 0.75rem !important;
+    border-radius: 0.5rem 0 0 0.5rem !important;
     background-color: slategray !important;
-    border-radius: 0.5rem 0 0 0.5rem !important; /* Rounded left, flat right */
     margin-right: 0 !important;
-    padding-right: 0.5rem !important;
-    width: calc(100% + 0.25rem) !important; /* Extend to edge */
     margin-left: 0 !important;
+    overflow: hidden;
 }
 
-.login-button a {
-    text-decoration: none;
-    color: inherit;
-    width: 100%;
-    display: block;
+.login-button div,
+.logout-button div {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-.login-button div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap: 0.5rem;
-}
-
-.login-button p {
-    margin: 0;
-    padding: 0;
+.login-button p,
+.logout-button p {
+    margin: 0 !important;
+    padding: 0 !important;
     flex-shrink: 0;
+    font-size: 0.875rem;
+    font-weight: 500;
 }
 
-.login-button mat-icon {
+.login-button mat-icon,
+.logout-button mat-icon {
     flex-shrink: 0;
+    margin-left: 0.5rem;
+}
+
+.logout-button {
+    background-color: #d32f2f !important;
 }

@@ -1,0 +1,40 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--mat-sys-surface-dim);
+  padding: 1rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  max-width: 400px;
+  width: 100%;
+  background-color: var(--mat-sys-surface-container);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--mat-sys-level2);
+  gap: 1rem;
+}
+
+.login-form h2 {
+  margin: 0 0 1rem 0;
+  text-align: center;
+  color: var(--mat-sys-on-surface);
+  font-size: var(--mat-sys-headline-medium-size);
+  font-weight: var(--mat-sys-headline-medium-weight);
+}
+
+.login-full-width,
+.example-full-width {
+  width: 100%;
+}
+
+.login-form button {
+  margin-top: 0.5rem;
+  align-self: center;
+  min-width: 120px;
+}

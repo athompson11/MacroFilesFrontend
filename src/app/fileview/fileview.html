@@ -1,6 +1,6 @@
-@if (files && files.length > 0) {
+@if (files() && files().length > 0) {
 <mat-list>
-  @for (file of files; track file) {
+  @for (file of files(); track file) {
     <app-file class="file-item"
       [filename]="file" 
       [selected]="selectedFiles.includes(file)" 
@@ -8,4 +8,9 @@
     </app-file>
   }
 </mat-list>
+}
+@else {
+  <div class="empty">
+    <p>Please sign in.</p>
+  </div>
 }

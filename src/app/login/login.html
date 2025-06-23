@@ -1,1 +1,32 @@
-<p>login works!</p>
+<div class="login-container">
+<form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h2>Sign In</h2>
+  
+  <mat-form-field class="login-full-width">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput formControlName="email" [errorStateMatcher]="matcher"
+           placeholder="someone@gmail.com">
+    @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+      <mat-error>Please enter a valid email address</mat-error>
+    }
+    @if (emailFormControl.hasError('required')) {
+      <mat-error>Email is <strong>required</strong></mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field class="login-full-width">
+    <mat-label>Password</mat-label>
+    <input type="password" matInput formControlName="password" [errorStateMatcher]="matcher">
+    @if (passwordFormControl.hasError('required')) {
+      <mat-error>Password is <strong>required</strong></mat-error>
+    }
+    @if (passwordFormControl.hasError('minlength')) {
+      <mat-error>Password must be at least 6 characters long</mat-error>
+    }
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">
+    Sign In
+  </button>
+</form>
+</div>

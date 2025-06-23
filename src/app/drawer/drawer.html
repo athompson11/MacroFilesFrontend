@@ -1,14 +1,21 @@
 <mat-sidenav-container class="sidenav-container" >
-    <mat-sidenav #drawer [opened]="drawerOpen()" position="end">
+    <mat-sidenav #drawer [opened]="drawerOpen()" position="end" mode="over">
         <mat-list>
-            <mat-list-item class="login-button">
-                <a href="#">
-                    <div >
+            @if (!isLoggedIn()) {
+                <mat-list-item class="login-button" routerLink="/login">
+                    <div>
                         <p>Sign in</p>
                         <mat-icon matListItemIcon>login</mat-icon>
                     </div>
-                </a>
-            </mat-list-item>
+                </mat-list-item>
+            } @else {
+                <mat-list-item class="logout-button" (click)="logout()">
+                    <div>
+                        <p>Logout</p>
+                        <mat-icon matListItemIcon>logout</mat-icon>
+                    </div>
+                </mat-list-item>
+            }
         </mat-list>
     </mat-sidenav>
     <mat-sidenav-content>
