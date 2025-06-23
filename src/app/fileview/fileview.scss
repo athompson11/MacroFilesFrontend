@@ -8,13 +8,13 @@ mat-list {
     padding: 0;
 }
 
-mat-list-item {
+.file-item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer !important; /* Make the cursor a pointer on hover */
 }
 
-mat-list-item.selected {
-    background-color: slategray;
-}
+
+

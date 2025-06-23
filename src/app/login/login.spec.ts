@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Filewindow } from './filewindow';
+import { Login } from './login';
 
-describe('Filewindow', () => {
-  let component: Filewindow;
-  let fixture: ComponentFixture<Filewindow>;
+describe('Login', () => {
+  let component: Login;
+  let fixture: ComponentFixture<Login>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Filewindow]
+      imports: [Login]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Filewindow);
+    fixture = TestBed.createComponent(Login);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,8 +1,3 @@
-:host {
-  display: block;
-  padding: 1rem;
-  cursor: pointer;
-}
 
 :host.selected {
   background-color: slateblue; /* Highlight color */
@@ -11,4 +6,10 @@
 
 :host(:hover) {
   background-color: slateblue; /* Subtle highlight on hover */
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }

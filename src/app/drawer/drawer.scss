@@ -1,5 +1,6 @@
 .sidenav-container{
     height: 100%;
+    width: 100%;
 }
 
 mat-sidenav-content{
@@ -7,36 +8,64 @@ mat-sidenav-content{
     width: auto;
 }
 
+
 mat-sidenav {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: left;
+    align-items: right;
+    justify-content: right;
     text-align: center;
-    padding: 0.25rem;
+    padding: 0.25rem 0 0.25rem 0.25rem; /* Remove right padding */
     width: auto;
-    max-width: 15vw;
+    max-width: 25vw;
     min-width: 10vw;
+}
+
+
+mat-list {
+    padding: 0 !important; /* Remove default Material list padding */
 }
 
 .login-button {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
     width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     gap: 0.5rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    background-color: slategray;
+    background-color: slategray !important;
+    border-radius: 0.5rem 0 0 0.5rem !important; /* Rounded left, flat right */
+    margin-right: 0 !important;
+    padding-right: 0.5rem !important;
+    width: calc(100% + 0.25rem) !important; /* Extend to edge */
+    margin-left: 0 !important;
+}
+
+.login-button a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    display: block;
+}
+
+.login-button div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0.5rem;
 }
 
 .login-button p {
     margin: 0;
+    padding: 0;
     flex-shrink: 0;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    width: 100%;
+.login-button mat-icon {
+    flex-shrink: 0;
 }
